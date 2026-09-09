@@ -1,0 +1,17 @@
+<!--
+Repository file map; all listed files are comment-only placeholders.
+.github/CODEOWNERS
+.github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/engineering_task.md
+.github/ISSUE_TEMPLATE/feature_request.md
+.gitignore
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+PULL_REQUEST_TEMPLATE.md
+README.md
+SECURITY.md
+SUPPORT.md
+docs/automation.md
+docs/github-setup.md
+profile/README.md
+-->
