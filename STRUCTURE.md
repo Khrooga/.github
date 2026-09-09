@@ -1,9 +1,11 @@
 <!--
-Repository file map; all listed files are comment-only placeholders.
+Repository file map. Product placeholders remain comment-only; CI and ignore configuration are active.
 .github/CODEOWNERS
 .github/ISSUE_TEMPLATE/bug_report.md
 .github/ISSUE_TEMPLATE/engineering_task.md
 .github/ISSUE_TEMPLATE/feature_request.md
+.github/dependabot.yml
+.github/workflows/repository-checks.yml
 .gitignore
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md

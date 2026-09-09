@@ -1,1 +1,36 @@
-# Define exclusions for secrets, local environment files, dependencies, generated output, and machine-specific files before implementation.
+# Local credentials and environment files; examples contain no real values.
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies, local tooling, generated output, and test reports.
+node_modules/
+.pnpm-store/
+.turbo/
+.next/
+.expo/
+dist/
+build/
+coverage/
+playwright-report/
+test-results/
+*.log
+.DS_Store
+.idea/
+.venv/
+__pycache__/
+
+# Infrastructure state and sensitive variable values.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+crash.log
