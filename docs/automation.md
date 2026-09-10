@@ -1,5 +1,6 @@
 Repository automation is active; application and infrastructure implementation remains a scaffold.
 
+- `.github/workflows/ci.yml` provides the stable `CI / Basic Validation` status check for repository structure, configuration syntax where applicable, tracked environment files, and whitespace errors. It is suitable for a required ruleset check before application build/test jobs exist.
 - `.github/workflows/repository-checks.yml` runs on pull requests, main pushes, manual dispatch, and weekly. It scans all fetched Git history with Gitleaks, validates workflows with actionlint, and checks changed lines for whitespace errors.
 - Tools are version-pinned and release archives are SHA-256 verified. Checkout is pinned to a full commit, credentials are not persisted, and workflow permissions are read-only. No repository or cloud secrets are required.
 - Gitleaks runs as its open-source CLI; this setup does not use the separately licensed Gitleaks organization Action. Findings are redacted and fail the check. A scan failure must be investigated; do not suppress it to merge.
