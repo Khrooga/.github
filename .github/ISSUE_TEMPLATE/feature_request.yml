@@ -1,0 +1,76 @@
+name: Feature Request
+description: Propose a new Phase 1 capability or improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: work-item
+    attributes:
+      label: Related ClickUp work item
+      description: Enter the ClickUp ID that tracks this request.
+      placeholder: EF-006
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or user need
+      description: Explain the problem, who experiences it, and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-behavior
+    attributes:
+      label: Proposed behavior
+      description: Describe the expected user or system behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable conditions that must be satisfied.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Select every area expected to change.
+      multiple: true
+      options:
+        - Mobile
+        - Backend
+        - Web
+        - Platform / DevOps
+        - Infrastructure
+        - Data / Recommendations
+        - Shared contracts
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: api-data-impact
+    attributes:
+      label: API or data impact
+      description: Describe API, contract, schema, migration, or data-processing changes, or write N/A.
+  - type: textarea
+    id: ui-ux-impact
+    attributes:
+      label: UI or UX impact
+      description: Describe user-facing changes and link designs where applicable, or write N/A.
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List dependent work items, services, decisions, or blockers, or write None.
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add supporting links, constraints, examples, or other relevant information.
