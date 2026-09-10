@@ -1,0 +1,105 @@
+name: Bug Report
+description: Report reproducible incorrect behavior in a Khrooga system.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: work-item
+    attributes:
+      label: Related ClickUp work item
+      description: Enter the related ClickUp ID when one exists.
+      placeholder: EF-000
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the incorrect behavior and when it occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include environment, app or API version, device, OS, browser, and relevant configuration.
+      placeholder: "Environment: staging; App version: 0.1.0; Device/OS: iPhone / iOS 19"
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-component
+    attributes:
+      label: Affected component
+      options:
+        - Mobile
+        - Backend API
+        - Web
+        - Platform / CI/CD
+        - Infrastructure
+        - Data / Recommendations
+        - Shared contracts
+        - Documentation
+        - Unknown / Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable sequence that reproduces the issue.
+      placeholder: |
+        1. Go to ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what should have happened.
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: Describe what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity and impact
+      description: Select the highest impact that applies.
+      options:
+        - Critical — outage, security exposure, or data loss
+        - High — major workflow blocked with no practical workaround
+        - Medium — degraded behavior with a workaround
+        - Low — minor defect or cosmetic issue
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error messages
+      description: Paste sanitized logs or stack traces. Remove secrets and personal data, or write N/A.
+      render: shell
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or evidence
+      description: Drag in screenshots or recordings when they clarify the issue, or write N/A.
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Regression status
+      description: Indicate whether this worked previously when known.
+      options:
+        - Unknown
+        - Yes — worked previously
+        - No — never worked as expected
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add related issues, suspected causes, frequency, or other relevant information.

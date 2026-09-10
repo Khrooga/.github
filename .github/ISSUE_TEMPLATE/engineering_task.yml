@@ -1,0 +1,87 @@
+name: Engineering Task
+description: Define scoped technical, infrastructure, maintenance, or documentation work.
+title: "[Engineering]: "
+body:
+  - type: input
+    id: work-item
+    attributes:
+      label: Related ClickUp work item
+      description: Enter the ClickUp ID that tracks this task.
+      placeholder: EF-006
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: State the outcome this task must achieve and why it is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: technical-scope
+    attributes:
+      label: Technical scope
+      description: Define the included technical work, boundaries, and important implementation constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Acceptance criteria / Definition of Done
+      description: List measurable completion and quality conditions.
+      placeholder: |
+        - [ ] Implementation is complete.
+        - [ ] Required validation passes.
+        - [ ] Documentation is updated.
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-components
+    attributes:
+      label: Affected repositories or components
+      description: Select every repository or component expected to change.
+      multiple: true
+      options:
+        - khrooga-platform / Mobile
+        - khrooga-platform / Backend API
+        - khrooga-platform / Web
+        - khrooga-platform / Shared packages
+        - khrooga-infrastructure
+        - khrooga-engineering
+        - Organization .github
+        - Data / Recommendations
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or blockers
+      description: List prerequisite work, decisions, access, or external dependencies, or write None.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Testing and validation requirements
+      description: Specify the automated checks, manual tests, or evidence required.
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security considerations
+      description: Describe authentication, authorization, secrets, privacy, or threat considerations, or write N/A.
+  - type: textarea
+    id: technical-impact
+    attributes:
+      label: API, database, or configuration impact
+      description: Describe contract, schema, migration, environment, permission, or configuration changes, or write N/A.
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation requirements
+      description: Identify documents that must change, or write N/A.
+  - type: textarea
+    id: release
+    attributes:
+      label: Deployment or release considerations
+      description: Describe rollout order, feature flags, migrations, monitoring, or rollback needs, or write N/A.
